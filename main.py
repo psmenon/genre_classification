@@ -91,7 +91,7 @@ def go(config: DictConfig):
             fp.write(OmegaConf.to_yaml(config["random_forest_pipeline"]))
 
         ## YOUR CODE HERE: call the random_forest step
-         _ = mlflow.run(
+        _ = mlflow.run(
             os.path.join(root_path, "random_forest"),
             "main",
             parameters={
